@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>tip-calculator</title>
+</head>
+<body>
+    
+    <main class="calculator">
+        <form action="" class="calculator__form">
+            <div class="calculator__input">
+                <label>Bill</label>
+                <input type="number" id="bill" value="0">
+            </div>
+
+            <div class="calculator__input">
+                <label>Tip</label>
+                <div class="calculator__tip">
+                    <input type="range" id="tip" value="0">
+                    <div class="calculator__tip--value"></div>
+                </div>
+            </div>
+
+            <div class="calculator__input">
+                <label>Person</label>
+                <input type="number" id="person" value="1">
+            </div>
+        </form>
+
+        <div class="calculator__results">
+            <div class="calculator__pertip">
+                <p>Tip</p>
+                <h3>BDT <span class="amount tip">0.00</span></h3>
+                <p>Per person</p>
+            </div>
+            <div class="calculator__pertotal">
+                <p>Total</p>
+                <h3>BDT <span class="amount total">0.00</span></h3>
+                <p>Per person</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
