@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <!-- Font awesome -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Reviews</h1>
+
+        <!-- Article -->
+        <article class="review">
+            <div class="review__image">
+                <img src="" alt="Person" id="person_img">
+            </div>
+
+            <div class="review__content">
+                <h2 class="review__author" id="author"></h2>
+                <p class="review__job" id="job"></p>
+                <p class="review__info" id="info">
+                </p>
+            </div>
+        </article>
+        <!-- Arrow buttons -->
+        <div class="buttons">
+            <button id="prev_button">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </button>
+            
+            <button id="next_button">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+        </div>
+
+        <button class="random_button">Click</button>
+    </main>
+    
+
+    <!-- Ionic Icon -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>
