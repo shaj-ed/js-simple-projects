@@ -1,0 +1,157 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: all .2s ease-in;
+    font-size: 4.3rem;
+    cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+}
+
+.header {
+    padding: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
+
+    &__logo {
+        font-family: 'Parisienne', cursive;
+        font-size: 6rem;
+        color: #222;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        &--close {
+            display: none;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 3rem;
+        margin-right: 10rem;
+    }
+
+    &__link {
+        font-size: 2rem;
+        color: #333;
+        transition: all .2s ease-in;
+
+        &:hover {
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+    }
+
+    &__icon {
+        display: inline-flex;
+        color: #333;
+        font-size: 2.2rem;
+        margin-right: 2rem;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+
+    &__toggle {
+        display: none;
+    }
+
+    @media only screen and(max-width: 778px) {
+        padding: 2rem;
+        
+        &__logo {
+            font-size: 4rem;
+        }
+
+        &__nav {
+            position: absolute;
+            width: 70%;
+            top: 0;left: 0;
+            height: 100vh;
+            background-color: #333;
+            z-index: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 15rem 2rem 2rem 2rem;
+            transform: translateX(-100%);
+            transition: all .3s ease-out;
+
+            &.open {
+                transform: translate(0);
+            }
+    
+    
+            &--close {
+                color: #eee;
+                position: absolute;
+                top: 2rem;right: 2rem;
+                display: flex;
+            }
+        }
+    
+        &__links {
+            flex-direction: column;
+            gap: 3rem;
+        }
+    
+        &__link {
+            font-size: 4rem;
+            color: #eee;
+    
+            &:hover {
+                margin-left: 1rem;
+            }
+        }
+
+        &__icon {
+            color: #eee;
+        }
+        
+        &__toggle {
+            display: flex;
+        }
+    }
+
+    @media only screen and(max-width: 500px) {
+        &__nav {
+            width: 100%;
+        }
+    }
+}
