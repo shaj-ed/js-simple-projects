@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.container {
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form, .result {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input, button {
+    padding: 8px 11px;
+}
+
+button {
+    font-weight: bold;
+}
+
+p {
+    margin-top: 20px;
+    line-height: 1.5;
+}
