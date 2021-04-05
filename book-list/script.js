@@ -157,6 +157,10 @@ const displayButtons = () => {
   // Filtered
   buttons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
+      // Click
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      btn.classList.add("active");
+      //   get the category
       let category = e.currentTarget.dataset.id;
 
       // filter at books array for seeing the same items
