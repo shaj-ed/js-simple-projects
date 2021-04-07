@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Game</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <!-- <h1>Sum Game.</h1> -->
+
+    <main class="container">
+        <div class="number">
+            <div class="number-one">3</div>
+            <span class="plus">+</span>
+            <div class="number-two">10</div>
+            <span class="equal">=</span>
+            <div class="number-answer">?</div>
+        </div>
+
+        <input id="answerValue" placeholder="Enter your answer...">
+        <button id="submitButton">Submit</button>
+    </main>
+
+    <!-- Right Modal -->
+    <div class="right-modal">
+        <div>
+            <ion-icon name="checkmark-done-outline" class="right-icon"></ion-icon>
+        </div>
+        <h2>Thats Right Mate<br> You Won!</h2>        
+    </div>
+
+    <!-- Wrong Modal -->
+    <div class="wrong-modal">
+        <div>
+            <ion-icon name="close-outline" class="wrong-icon"></ion-icon>
+        </div>
+        <h2>Thats Wrong Mate<br> You've Lost!</h2>        
+    </div>
+
+    <!-- Ionic -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- JS -->
+    <script src="./app.js"></script>
+</body>
+</html>
