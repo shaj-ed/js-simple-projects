@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs Section</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="container__title">Our Lives</h1>
+      <p class="container__paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime,
+        laborum dolore numquam eius optio molestias?
+      </p>
+
+      <section class="tab__section">
+        <div class="all__tabs">
+          <div class="tab active" data-id="cat">Cat</div>
+          <div class="tab" data-id="wolf">Wolf</div>
+          <div class="tab" data-id="lion">Lion</div>
+        </div>
+
+        <div class="tab__content">
+          <!-- Kitty Cat -->
+          <article class="tab__article active" id="cat">
+            <div class="article__content">
+              <h2 class="article__title">Kitty Kat Mewoo</h2>
+              <p class="article__paragraph">
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean. A small river named Duden flows by their
+                place and supplies it with the necessary regelialia. It is a
+                paradisematic country, in which roasted parts of sentences fly
+                into your mouth. Even the all-powerful
+              </p>
+              <a href="#" class="article__button">Cat</a>
+            </div>
+
+            <div class="article__image">
+              <img src="./images/cat.jpg" alt="cat" />
+            </div>
+          </article>
+
+          <!-- Wolf -->
+          <article class="tab__article" id="wolf">
+            <div class="article__content">
+              <h2 class="article__title">Wolf Wooly Woo</h2>
+              <p class="article__paragraph">
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean. A small river named Duden flows by their
+                place and supplies it with the necessary regelialia. It is a
+                paradisematic country, in which roasted parts of sentences fly
+                into your mouth. Even the all-powerful
+              </p>
+              <a href="#" class="article__button">Wolf</a>
+            </div>
+
+            <div class="article__image">
+              <img src="./images/wolf.jpg" alt="wolf" />
+            </div>
+          </article>
+
+          <!-- Lion -->
+          <article class="tab__article" id="lion">
+            <div class="article__content">
+              <h2 class="article__title">Lion Lion Lazy</h2>
+              <p class="article__paragraph">
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean. A small river named Duden flows by their
+                place and supplies it with the necessary regelialia. It is a
+                paradisematic country, in which roasted parts of sentences fly
+                into your mouth. Even the all-powerful
+              </p>
+              <a href="#" class="article__button">Lion</a>
+            </div>
+
+            <div class="article__image">
+              <img src="./images/lion.jpg" alt="lion" />
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>
