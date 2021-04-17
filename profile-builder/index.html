@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Builder</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Profile Builder App.</h1>
+    <span class="success">Success</span>
+
+    <main class="container">
+      <section class="form__section">
+        <form id="profileForm">
+          <div class="input__section">
+            <label class="input__title">Name</label>
+            <input type="text" id="inputName" placeholder="Enter your name.." />
+            <!-- <span class="alert"></span> -->
+          </div>
+
+          <div class="input__section">
+            <label class="input__title">Profession</label>
+            <input
+              type="text"
+              id="inputProfession"
+              placeholder="Your profession"
+            />
+          </div>
+
+          <div class="input__section">
+            <label class="input__title">Skills</label>
+            <input type="text" id="inputSkills" placeholder="Your profession" />
+          </div>
+
+          <div class="input__section">
+            <label class="input__title">Profession</label>
+            <textarea
+              id="inputAbout"
+              cols="30"
+              rows="5"
+              placeholder="Say something about yourself.."
+            ></textarea>
+          </div>
+
+          <button id="inputButton">Submit</button>
+        </form>
+      </section>
+
+      <section class="profile__section"></section>
+    </main>
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>

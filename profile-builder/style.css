@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 1rem 0;
+  background-color: #222831;
+  color: #eeeeee;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 80rem;
+  min-height: 50rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.form__section {
+  width: 35rem;
+  padding: 4rem 3rem;
+  border-radius: 0.5rem;
+  background-color: #322f3d;
+  color: #f0ece2;
+  border: 0.2rem solid #322f3d;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  position: fixed;
+}
+
+.form__section form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.input__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.input__section textarea,
+.input__section input {
+  padding: 1rem;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #f0ece2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #f0ece2;
+  background-color: #322f3d;
+}
+
+.success,
+.alert {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+
+.alert {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.success {
+  width: 40rem;
+}
+
+.alert__danger {
+  visibility: visible;
+  background-color: #e84545;
+}
+
+.alert__success {
+  visibility: visible;
+  background-color: #0f4c75;
+}
+
+.form__section button {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #162447;
+  color: #f0ece2;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Profile */
+.profile__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.profile {
+  width: 30rem;
+  border: 1px solid #322f3d;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  overflow: hidden;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.profile__image {
+  height: 15rem;
+}
+
+.profile__info {
+  padding: 1.5rem;
+  background-color: #322f3d;
+}
+
+.profile__name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.profile__profession {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.profile__skills {
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile__about {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
