@@ -1,0 +1,210 @@
+// Variables
+$bgDark: #1a1a2e;
+$bgLight: #00adb5;
+$bgDark2: #222831;
+$textLight: #acdbdf;
+$textBluish: #69779b;
+
+$errorColor: #ff7844;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $bgDark;
+  color: $textLight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 30rem;
+  height: 40rem;
+  background-color: $bgDark2;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background-color: $textBluish;
+    top: 6.5rem;
+    left: 0;
+  }
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.2s ease-in;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__inputbox {
+    width: 100%;
+    position: relative;
+  }
+
+  &__label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #000;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    background-color: $bgLight;
+  }
+
+  input:valid + &__label {
+    top: -1.5rem;
+    left: 3rem;
+    color: $textLight;
+    font-size: 1.4rem;
+  }
+
+  &__icon {
+    position: absolute;
+    font-size: 2.2rem;
+    top: -3.1rem;
+    left: 0.5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+
+    i {
+      font-size: 3rem;
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .left {
+      color: $textBluish;
+      opacity: 0;
+    }
+
+    .right {
+      color: $bgLight;
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    width: 0;
+    height: 0.7rem;
+    top: 0;
+    left: 0;
+    background-color: $textBluish;
+    border-radius: 2rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__buttons,
+  &__inputbox {
+    transform: translateX(-110%);
+    transition: all 0.1s ease-in;
+  }
+}
+
+// Error
+.error {
+  .form__input,
+  .form__icon,
+  .form__buttons .right {
+    color: $errorColor;
+  }
+}
+
+// Shake element box if error happens
+// Shake it
+@keyframes shakeIt {
+  0% {
+    transform: translate(10px, 0);
+  }
+  25% {
+    transform: translate(-10px, 0);
+  }
+  50% {
+    transform: translate(10px, 0);
+  }
+  75% {
+    transform: translate(-10px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.shake-animation {
+  animation: shakeIt 0.3s ease-in-out 1 both;
+}
+
+// Shake rotate
+@keyframes rotate {
+  0% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.shake-rotate {
+  animation: rotate 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1 both;
+}
+
+// Completed form title
+.completed {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: $textLight;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
