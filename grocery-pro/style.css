@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.container {
+  margin-top: 5rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem 8rem;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+
+.wrapper {
+  margin-top: 2rem;
+}
+
+.wrapper form {
+  padding: 1.5rem 10rem;
+  display: flex;
+  gap: 1rem;
+  background-color: #fff;
+}
+
+.wrapper form input {
+  padding: 0.7rem;
+  font-weight: 500;
+}
+
+.wrapper form button {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+}
+
+.list__container {
+  padding: 2rem 10rem;
+  background-color: #fff;
+  visibility: hidden;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.lists .list {
+  width: 100%;
+  padding: 2rem;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.lists .list:hover {
+  background-color: #efe;
+}
+
+.list .button__group {
+  display: flex;
+  gap: 1rem;
+}
+
+.list .list__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.button__group button {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.clear__button {
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 100%;
+  background-color: #ddf;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.clear__button:hover {
+  background-color: aqua;
+}
+
+.alert {
+  display: block;
+  text-align: center;
+  font-size: 1.7rem;
+  padding: 1rem;
+  color: #fff;
+  text-transform: capitalize;
+  visibility: hidden;
+  transition: all 0.2s ease-in;
+}
+
+.alert__error {
+  visibility: visible;
+  background-color: brown;
+}
+
+.alert__success {
+  visibility: visible;
+  background-color: chocolate;
+}
+
+/* Visiblity */
+.visible {
+  visibility: visible;
+}
