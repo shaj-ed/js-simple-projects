@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: 110rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.container__posts {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container__content .post {
+  width: 30.2rem;
+  padding: 1rem;
+  border: 1px solid purple;
+  border-radius: 0.5rem;
+}
+
+.post__image {
+  width: 100%;
+  height: 25rem;
+  margin-bottom: 1.5rem;
+}
+
+.post__info {
+  padding: 0 1.5rem;
+}
+
+.post__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.post__body {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
