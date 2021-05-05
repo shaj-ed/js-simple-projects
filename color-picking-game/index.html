@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color-picking-game</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">Color Picking Game</h1>
+
+      <section class="container">
+        <header class="header">
+          <button class="restart-btn">New Game</button>
+
+          <strong class="target-color"></strong>
+
+          <div class="game-mode-btns">
+            <button class="easy-btn">Easy</button>
+            <button class="hard-btn active">Hard</button>
+          </div>
+        </header>
+
+        <div class="color-cards">
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color hard"></div>
+          <div class="color hard"></div>
+          <div class="color hard"></div>
+        </div>
+      </section>
+
+      <div class="correct">
+        <h1>Correct</h1>
+      </div>
+    </main>
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>
