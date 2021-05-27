@@ -1,0 +1,165 @@
+/* Variables */
+:root {
+  --bgDark: #383f46;
+  --colorLight: #e1e1e1;
+  --colorDark: #222527;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 65.16%;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--colorDark);
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  left: 2rem;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  pointer-events: none;
+  transform: translateX(-110%);
+  transition: all 0.4s cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--colorLight);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.nav .nav__link + .nav__link {
+  margin-left: 2rem;
+}
+
+.nav .nav__link + .nav__link + .nav__link {
+  margin-left: 4rem;
+}
+
+.nav .nav__link + .nav__link + .nav__link + .nav__link {
+  margin-left: 6rem;
+}
+
+.nav__link i {
+  margin-right: 1rem;
+}
+
+.main.show--nav .nav {
+  pointer-events: visible;
+  transform: translateX(0);
+}
+
+/* Container For Article */
+.container {
+  width: 100vw;
+  background-color: var(--colorLight);
+  padding: 3rem;
+  transform-origin: top left;
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+.main.show--nav .container {
+  transform: rotate(-20deg);
+}
+
+.container__title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.article {
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.article__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-style: italic;
+  margin: 2rem 1.2rem;
+  text-transform: capitalize;
+}
+
+.article__image {
+  width: 100%;
+  height: 35rem;
+}
+
+.article__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article__snippet {
+  margin-top: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.article__snippet > strong {
+  display: block;
+  margin-top: 2rem;
+}
+
+/* Circle for show & hide navigation */
+.circle {
+  position: fixed;
+  width: 20rem;
+  height: 20rem;
+  background-color: var(--bgDark);
+  border-radius: 50%;
+  top: -10rem;
+  left: -10rem;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.main.show--nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle__buttons {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.circle__buttons button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: var(--colorLight);
+  cursor: pointer;
+}
+
+.circle__buttons button#open {
+  top: 13rem;
+  left: 13rem;
+}
+
+.circle__buttons button#close {
+  top: 71%;
+  left: 8rem;
+  transform: rotate(70deg);
+  transform-origin: top left;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotating Navigation</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="circle">
+        <div class="circle__buttons">
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="#" class="nav__link"> <i class="fas fa-home"></i> Home </a>
+
+        <a href="#" class="nav__link">
+          <i class="fas fa-newspaper"></i> Articles
+        </a>
+
+        <a href="#" class="nav__link">
+          <i class="fas fa-marker"></i> Authors
+        </a>
+
+        <a href="#" class="nav__link">
+          <i class="fas fa-envelope"></i> Support
+        </a>
+      </nav>
+
+      <section class="container">
+        <h2 class="container__title">Articles.</h2>
+
+        <article class="article">
+          <h1 class="article__title">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, dolores?
+          </h1>
+
+          <div class="article__image">
+            <img src="./article__image.jpg" alt="Article Image" />
+          </div>
+
+          <p class="article__snippet">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            animi cupiditate totam ut provident id accusamus repellat quia,
+            molestias dignissimos nam quasi recusandae dolores cum nihil
+            laudantium maxime inventore et eos ab. Eum at omnis nam accusamus ad
+            ut provident, dolorem incidunt. Assumenda ea id doloribus blanditiis
+            quisquam nulla rerum dolores animi exercitationem quaerat veniam
+            esse possimus expedita repudiandae necessitatibus numquam ad culpa
+            temporibus nobis, aspernatur sed quos perspiciatis cum. Quis
+            praesentium accusamus minima voluptates velit. Veniam similique
+            dolorem ut velit pariatur voluptatibus aut nobis sequi, odit
+            deserunt praesentium ab cumque dignissimos, ex est in sapiente
+            voluptatum soluta? Eum, alias?<br />
+            <strong>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam at
+              et quod voluptatibus repellendus excepturi atque, sequi distinctio
+              tenetur commodi doloremque maiores aut consectetur id, molestiae
+              expedita aperiam delectus fugit eos, voluptates quidem.
+              Repellendus, corrupti maxime unde delectus asperiores ex. Neque
+              nobis excepturi error est deserunt incidunt quae possimus dolore!
+            </strong>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>
