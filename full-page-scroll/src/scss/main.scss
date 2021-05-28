@@ -1,0 +1,217 @@
+// Fonts
+$fontHeader: "Limelight", cursive;
+$fontBody: "Roboto Mono", monospace;
+
+// Colors
+$bgDark: #212121;
+
+$textBody: #eeeeee;
+$textDark: #2b1f31;
+
+$transitionAll: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-size: 65.16%;
+  background-color: $bgDark;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Header
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1rem;
+  max-width: 99rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 10;
+
+  @media screen and(min-width: 688px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  a {
+    font-family: $fontHeader;
+    color: $textBody;
+    padding: 0.5rem;
+    border-bottom: 0.2rem solid transparent;
+    transition: $transitionAll;
+
+    &:hover {
+      border-bottom: 0.2rem solid rgba($textBody, 0.5);
+    }
+  }
+
+  &__logo {
+    font-size: 3.5rem;
+
+    @media screen and(min-width: 500px) {
+      font-size: 4.2rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1.5rem;
+
+    @media screen and(min-width: 500px) {
+      gap: 3.5rem;
+    }
+  }
+
+  &__nav-link {
+    font-size: 1.5rem;
+
+    &.active {
+      border-bottom: 0.2rem solid $textBody;
+    }
+
+    @media screen and(min-width: 500px) {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+// Nav circle
+.circle {
+  position: fixed;
+  right: 2rem;
+  bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 100;
+
+  a {
+    list-style: none;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: transparent;
+    border: 0.3rem solid $textBody;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      margin: 0.3rem;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: transparent;
+      border-radius: 50%;
+      transition: $transitionAll;
+    }
+
+    &:hover,
+    &.active {
+      &::after {
+        background-color: $textBody;
+      }
+    }
+  }
+}
+
+// Sections
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: $transitionAll;
+
+  &__container {
+    width: 100%;
+    height: 25rem;
+    max-width: 70rem;
+    margin: 1rem auto;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($bgDark, 0.7);
+    }
+
+    @media screen and(min-width: 768px) {
+      height: 32rem;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40rem;
+    right: 2rem;
+    color: $textBody;
+    font-family: $fontBody;
+    z-index: 10;
+  }
+
+  &__content-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+
+  &__content-para {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0.8rem 0 1.2rem 0;
+  }
+
+  &__content-button {
+    display: inline-block;
+    font-family: $fontHeader;
+    font-size: 2.2rem;
+    padding: 1rem;
+    background-color: rgba($textBody, 0.3);
+    color: $textDark;
+    transition: $transitionAll;
+
+    &:hover {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__travel {
+    background: url(../images/travel.jpg) no-repeat center center / cover;
+  }
+
+  &__music {
+    background: url(../images/music.jpg) no-repeat center center / cover;
+  }
+
+  &__food {
+    background: url(../images/food.jpg) no-repeat center center / cover;
+  }
+
+  &__cinema {
+    background: url(../images/cinema.jpg) no-repeat center center / cover;
+  }
+}
