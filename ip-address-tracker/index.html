@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1>IP Address Tracker</h1>
+
+      <!-- Submit IP Address Form -->
+      <form class="submit-form" id="submit-form">
+        <label for="input-value"></label>
+        <input
+          type="text"
+          class="submit-form__input"
+          id="input-value"
+          autocomplete="off"
+          placeholder="Search for any IP address"
+          required
+        />
+        <button class="submit-form__button">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </form>
+
+      <!-- Resutl Show -->
+      <section class="result-sec">
+        <div class="result-sec__item">
+          <p>IP Address</p>
+          <h2 class="result-sec__ip"></h2>
+        </div>
+
+        <div class="result-sec__item">
+          <p>Location</p>
+          <h2 class="result-sec__location"></h2>
+        </div>
+
+        <div class="result-sec__item">
+          <p>Timezone</p>
+          <h2 class="result-sec__timezone"></h2>
+        </div>
+
+        <div class="result-sec__item">
+          <p>ISP</p>
+          <h2 class="result-sec__isp"></h2>
+        </div>
+      </section>
+    </header>
+
+    <!-- Map -->
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>
