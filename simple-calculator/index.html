@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="calculator">
+        <!-- Result -->
+        <div class="display">
+          <div class="display__one" id="clicked-values"></div>
+          <div class="display__two" id="display-result"></div>
+          <div class="display__three" id="temp-result"></div>
+        </div>
+
+        <!-- Calculator Operation -->
+        <div class="operation-sec">
+          <span class="button button__clear" id="clear-cal">C</span>
+          <span class="button button__last-entry-clear" id="last-entry"
+            >CE</span
+          >
+          <span class="button button__operator">%</span>
+          <span class="button button__operator">/</span>
+          <span class="button button__number">7</span>
+          <span class="button button__number">8</span>
+          <span class="button button__number">9</span>
+          <span class="button button__operator">X</span>
+          <span class="button button__number">4</span>
+          <span class="button button__number">5</span>
+          <span class="button button__number">6</span>
+          <span class="button button__operator">-</span>
+          <span class="button button__number">1</span>
+          <span class="button button__number">2</span>
+          <span class="button button__number">3</span>
+          <span class="button button__operator">+</span>
+          <span class="button button__number button__number--zero">0</span>
+          <span class="button button__number">.</span>
+          <span class="button button__operator" id="equal">=</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="./JS/app.js"></script>
+  </body>
+</html>

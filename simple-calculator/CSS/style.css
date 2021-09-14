@@ -1,0 +1,101 @@
+/* Variables */
+:root {
+  --display-bg: #222831;
+  --operation-bg: #393e46;
+  --button-bg: #382933;
+  --operator-color: #e2703a;
+  --light: #dddddd;
+  --dark: #222831;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  background-image: linear-gradient(to right, #4ca1af, #c4e0e5);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 30rem;
+  background-color: var(--display-bg);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.display {
+  color: var(--light);
+  text-align: right;
+  height: 18rem;
+  position: relative;
+  padding: 8rem 4rem;
+}
+
+.display__one,
+.display__three {
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.display__two {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.display__three {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+}
+
+.operation-sec {
+  padding: 2.5rem 2.5rem 3.5rem 2.5rem;
+  background-color: var(--operation-bg);
+  color: var(--light);
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.2rem;
+  background-color: var(--button-bg);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--dark);
+}
+
+.button__operator {
+  color: var(--operator-color);
+}
+
+.button__number--zero {
+  grid-column: 1 / 3;
+}
